@@ -1,5 +1,5 @@
 # TorrServer
-![amd64][amd64-badge]
+
 ## BitTorrent to HTTP streaming
 
 Application for downloading torrents as `HTTP` files.
