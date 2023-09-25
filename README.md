@@ -1,4 +1,4 @@
-## Installing
+# Installing repository
 
 Click on the button below:
 
@@ -7,3 +7,8 @@ Click on the button below:
 Or, in your Home Assistant, navigate to 
 _Configuration_ > _Add-ons_ > _Add-on Store_ > _..._ > _Repositories_ 
 and add `https://github.com/h1tch007/hass-addons` to the list.
+
+# Add-ons:
+## TorrServer
+BitTorrent to HTTP streaming
+[![Open your Home Assistant instance and show the dashboard of a Supervisor add-on.](https://my.home-assistant.io/badges/supervisor_addon.svg)](https://my.home-assistant.io/redirect/supervisor_addon/?addon=765b2bd4_torrserver&repository_url=https%3A%2F%2Fgithub.com%2Fh1tch007%2Fhass-addons)
