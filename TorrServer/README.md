@@ -1,6 +1,5 @@
 # TorrServer
 ![Supports amd64 Architecture][amd64-shield]
-[amd64-shield]: https://img.shields.io/badge/amd64-yes-green.svg
 ## BitTorrent to HTTP streaming
 
 Application for downloading torrents as `HTTP` files.
@@ -19,3 +18,4 @@ Click on the button below:
 Or, in your Home Assistant, navigate to
 _Configuration_ > _Add-ons_ > _Add-on Store_
 and search for `TorrServer` in the list.
+[amd64-shield]: https://img.shields.io/badge/amd64-yes-green.svg
