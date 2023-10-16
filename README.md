@@ -6,4 +6,8 @@ Click on the button below:
 
 Or, in your Home Assistant, navigate to 
 _Configuration_ > _Add-ons_ > _Add-on Store_ > _..._ > _Repositories_ 
-and add `https://github.com/h1tch007/hass-addons` to the list.
+and add 
+```
+https://github.com/h1tch007/hass-addons
+```
+to the list.
