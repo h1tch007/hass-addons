@@ -8,6 +8,5 @@ RUN apk add --no-cache ffmpeg
 
 COPY TorrServer-linux-amd64 / 
 RUN chmod a+x /TorrServer-linux-amd64
-RUN mkdir -p /opt/torrents
 
-CMD [ "/TorrServer-linux-amd64 --torrentsdir /opt/torrents" ]
+CMD [ "/TorrServer-linux-amd64 --torrentsdir /opt" ]
