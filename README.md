@@ -11,3 +11,15 @@ and add
 https://github.com/h1tch007/hass-addons
 ```
 to the list.
+
+## Add-ons
+
+This repository contains the following add-ons
+
+### [TorrServer](./TorrServer)
+
+![Supports amd64 Architecture][amd64-shield]
+
+_BitTorrent to HTTP streaming add-on._
+
+[amd64-shield]: https://img.shields.io/badge/amd64-yes-green.svg
