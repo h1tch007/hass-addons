@@ -6,7 +6,7 @@ ENV \
     TS_TORR_DIR="/opt/torrents"
 
 # Install requirements for add-on
-RUN apk add --no-cache ffmpeg && mkdir -p /opt/torrents
+RUN apk add --no-cache ffmpeg
 
 COPY TorrServer-linux-amd64 / 
 RUN chmod a+x /TorrServer-linux-amd64
