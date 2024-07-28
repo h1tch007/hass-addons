@@ -3,7 +3,7 @@ FROM $BUILD_FROM
 
 ENV \
     GODEBUG="madvdontneed=1" \
-    TS_TORR_DIR"=/opt/torrents"
+    TS_TORR_DIR="/opt/torrents"
 
 # Install requirements for add-on
 RUN apk add --no-cache ffmpeg && mkdir -p /opt/torrents
