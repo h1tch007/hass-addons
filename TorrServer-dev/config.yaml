@@ -2,17 +2,16 @@ name: "TorrServer (dev)"
 description: "BitTorrent to HTTP streaming"
 panel_icon: mdi:movie-play
 url: "https://github.com/h1tch007/hass-addons/tree/main/TorrServer-dev"
-version: "0.134-b23"
+version: "0.134-b24"
 slug: "torrserver-dev"
 watchdog: "http://[HOST]:[PORT:8090]/"
 ingress: true
-ingress_port: 8090
+ingress_port: 0
 init: false
 arch: 
   - amd64
 map:
-  - type: addon_config
-    read_only: False
+  - addon_config:rw
 startup: before
 ports:
   8090/tcp: 8090
