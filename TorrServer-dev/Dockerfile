@@ -6,8 +6,8 @@ ENV GODEBUG=madvdontneed=1
 # Install requirements for add-on
 RUN apk add --no-cache ffmpeg
 
-RUN mkdir -p /share/torrents
 COPY TorrServer-linux-amd64 / 
 RUN chmod a+x /TorrServer-linux-amd64
+RUN mkdir -p /opt/torrents
 
-CMD [ "/TorrServer-linux-amd64 --torrentsdir /share/torrents" ]
+CMD [ "/TorrServer-linux-amd64 --torrentsdir /opt/torrents" ]
