@@ -7,6 +7,6 @@ ENV GODEBUG=madvdontneed=1
 RUN apk add --no-cache ffmpeg
 
 COPY TorrServer-linux-amd64 / 
-RUN chmod a+x /TorrServer-linux-amd64 && mkdir -p /config/torrents
+RUN chmod a+x /TorrServer-linux-amd64
 
-CMD [ "/TorrServer-linux-amd64 --path /config --torrentsdir /config/torrents" ]
+CMD [ "/TorrServer-linux-amd64 --path /config" ]
