@@ -4,11 +4,9 @@ FROM $BUILD_FROM
 ENV GODEBUG=madvdontneed=1
 
 # Install requirements for add-on
-RUN \
-  mkdir /share/torrents && \
-  apk add --no-cache \
-    ffmpeg
+RUN apk add --no-cache ffmpeg
 
+RUN mkdir -p /share/torrents
 COPY TorrServer-linux-amd64 / 
 RUN chmod a+x /TorrServer-linux-amd64
 
