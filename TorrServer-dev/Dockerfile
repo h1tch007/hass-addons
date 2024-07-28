@@ -10,5 +10,6 @@ RUN \
 
 COPY TorrServer-linux-amd64 / 
 RUN chmod a+x /TorrServer-linux-amd64
+RUN mkdir /share/torrents
 
 CMD [ "/TorrServer-linux-amd64 --torrentsdir /share/torrents" ]
