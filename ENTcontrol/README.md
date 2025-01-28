@@ -1,13 +1,9 @@
-# TorrServer
+# ENT Control
 ![Supports amd64 Architecture][amd64-shield]
-## BitTorrent to HTTP streaming
+## Эра Новых Технологий
 
-Application for downloading torrents as `HTTP` files.
-Torrent connection is done localy. **If your provider blocks torrents be aware**.
-Cache is stored in `RAM`, that is why internal memory does not corrupting.
-Application consists of two parts, server and client, this is server.
-
-Source of server: https://github.com/YouROK/TorrServer
+Приложение для управления замками на контроллерах ЭНТ
+Отправляет UDP пакет на открытие/закрытие замка
 
 ## Installing
 
