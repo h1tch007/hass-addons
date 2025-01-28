@@ -5,7 +5,7 @@ from time import sleep
 import paho.mqtt.client as mqtt
 import logging
 
-with open('./config.yaml', 'r') as file:
+with open('/etc/ent/config.yaml', 'r') as file:
     config = yaml.safe_load(file)
     mqtt_config = config.get("mqtt")
     log_config = config.get("logging")
