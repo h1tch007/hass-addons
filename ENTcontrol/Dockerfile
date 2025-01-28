@@ -6,7 +6,7 @@ ENV GODEBUG=madvdontneed=1
 # Install python/pip
 ENV PYTHONUNBUFFERED=1
 RUN apk add --update --no-cache python3 py3-pip && ln -sf python3 /usr/bin/python
-RUN pip3 install --no-cache paho-mqtt
+RUN python3 -m pip install paho-mqtt
 
 COPY rootfs /
 RUN chmod a+x /etc/ent/__main__.py
