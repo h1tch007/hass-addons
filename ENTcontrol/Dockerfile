@@ -4,9 +4,11 @@ FROM $BUILD_FROM
 ENV GODEBUG=madvdontneed=1
 
 # Install python/pip
-#ENV PYTHONUNBUFFERED=1
-#RUN apk add --update --no-cache python3 py3-pip && ln -sf python3 /usr/bin/python
-RUN python3 -m pip install paho-mqtt --root-user-action
+ENV PYTHONUNBUFFERED=1
+RUN apk add --update --no-cache python3 && ln -sf python3 /usr/bin/python
+RUN python3 -m ensurepip
+RUN pip3 install --upgrade pip setuptools
+RUN pip3 install --no-cachepaho-mqtt --root-user-action
 
 COPY rootfs /
 RUN chmod a+x /etc/ent/__main__.py
