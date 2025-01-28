@@ -1,0 +1,16 @@
+logging:
+  level: DEBUG
+
+mqtt:
+  MQTT_BROKER: "192.168.1.10"
+  MQTT_PORT: 1883
+  MQTT_USERNAME: "mqtt"
+  MQTT_PASSWORD: "mqtt"
+  MQTT_TOPIC: "homeassistant/lock/+/set"
+  LOCK_CODE: "2342"
+
+doors:
+  23:
+    host: 10.113.0.106
+    disable_packet: 2300071b0101b9
+    enable_packet: 2300071b0100ba

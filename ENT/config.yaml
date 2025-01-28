@@ -1,0 +1,18 @@
+name: "ENT"
+description: "Управление контроллером Эра Новых Технологий"
+panel_icon: mdi:movie-play
+url: "https://github.com/h1tch007/hass-addons/tree/main/ENT"
+version: "0.1"
+slug: "ent"
+init: false
+arch: 
+  - amd64
+map:
+  - addon_config:rw
+schema:
+  doors:
+    door:
+      host: str
+      disable_packet: str
+      enable_packet: str
+startup: before
