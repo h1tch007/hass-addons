@@ -80,12 +80,16 @@ logger = logging.getLogger(__name__)
 logging.basicConfig(encoding='utf-8', level=getattr(logging, log_config.get("level")))
 
 # MQTT client setup
+MQTT_BROKER=$(bashio::services mqtt "host")
+MQTT_PORT=$(bashio::services mqtt "port")
+MQTT_USERNAME=$(bashio::services mqtt "username")
+MQTT_PASSWORD=$(bashio::services mqtt "password")
 #client = mqtt.Client(mqtt.CallbackAPIVersion.VERSION2)
 client = mqtt.Client()
-client.username_pw_set(mqtt_config['MQTT_USERNAME'], password=mqtt_config['MQTT_PASSWORD'])
+client.username_pw_set(MQTT_USERNAME, password=MQTT_PASSWORD)
 client.on_connect = on_connect
 client.on_message = on_message
 
-client.connect(mqtt_config['MQTT_BROKER'], mqtt_config['MQTT_PORT'], 60)
+client.connect(MQTT_BROKER, MQTT_PORT, 60)
 logger.debug("Connecting to MQTT Broker...")
 client.loop_forever()

@@ -2,7 +2,7 @@ name: "ENTcontrol"
 description: "Управление контроллером Эра Новых Технологий"
 panel_icon: mdi:movie-play
 url: "https://github.com/h1tch007/hass-addons/tree/main/ENTcontrol"
-version: "0.1-23"
+version: "0.1-24"
 slug: "entcontrol"
 init: false
 host_network: true
