@@ -1,13 +1,15 @@
-ARG BUILD_FROM
+ARG BUILD_FROM=homeassistant/amd64-base-ubuntu:latest
 FROM $BUILD_FROM
 
-ENV GODEBUG=madvdontneed=1
+#ENV GODEBUG=madvdontneed=1
 
-# Install python/pip
-ENV PYTHONUNBUFFERED=1
-RUN apk add --update --no-cache python3 py3-paho-mqtt py3-yaml && ln -sf python3 /usr/bin/python
-# RUN apk add --update --no-cache python3 py3-yaml && ln -sf python3 /usr/bin/python
-# RUN pip3 install paho-mqtt
+RUN \
+  sed -i 's/# \(.*multiverse$\)/\1/g' /etc/apt/sources.list && \
+  apt-get update && \
+  apt-get -y upgrade && \
+  apt-get install -y python3-pip && \
+  pip3 install paho-mqtt &&
+  pip3 install pyyaml
 
 COPY rootfs /
 WORKDIR /etc/ent/

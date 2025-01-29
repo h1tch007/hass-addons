@@ -80,7 +80,7 @@ logger = logging.getLogger(__name__)
 logging.basicConfig(encoding='utf-8', level=getattr(logging, log_config.get("level")))
 
 # MQTT client setup
-client = mqtt.Client()
+client = mqtt.Client(mqtt.CallbackAPIVersion.VERSION2)
 client.username_pw_set(mqtt_config['MQTT_USERNAME'], password=mqtt_config['MQTT_PASSWORD'])
 client.on_connect = on_connect
 client.on_message = on_message
