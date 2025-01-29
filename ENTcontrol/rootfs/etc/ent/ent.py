@@ -36,7 +36,7 @@ def publish_discovery(client, door_id):
     client.publish(discovery_topic, json.dumps(discovery_payload), retain=True)
     logger.debug(f"MQTT auto discovery payload sent for door {door_id}")
 
-def on_connect(client, userdata, flags, rc, properties):
+def on_connect(client, userdata, flags, rc):
     logger.debug("Connected to MQTT Broker with result code "+str(rc))
     client.subscribe(mqtt_config['MQTT_TOPIC'])
     
