@@ -80,10 +80,6 @@ logger = logging.getLogger(__name__)
 logging.basicConfig(encoding='utf-8', level=getattr(logging, log_config.get("level")))
 
 # MQTT client setup
-MQTT_BROKER="$(bashio::services mqtt 'host')"
-MQTT_PORT="$(bashio::services mqtt 'port')"
-MQTT_USERNAME="$(bashio::services mqtt 'username')"
-MQTT_PASSWORD="$(bashio::services mqtt 'password')"
 #client = mqtt.Client(mqtt.CallbackAPIVersion.VERSION2)
 client = mqtt.Client()
 client.username_pw_set(MQTT_USERNAME, password=MQTT_PASSWORD)

@@ -2,7 +2,7 @@ logging:
   level: DEBUG
 
 mqtt:
-  MQTT_BROKER: "192.168.1.10"
+  MQTT_BROKER: "core-mosquitto"
   MQTT_PORT: 1883
   MQTT_USERNAME: "mqtt"
   MQTT_PASSWORD: "mqtt"
