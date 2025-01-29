@@ -10,6 +10,6 @@ RUN apk add --update --no-cache python3 py3-paho-mqtt py3-yaml && ln -sf python3
 COPY rootfs /
 WORKDIR /etc/ent/
 
-RUN chmod a+x test.sh
+RUN chmod a+x /etc/ent/test.sh
 #CMD [ "python3","ent.py" ]
-CMD [ "test.sh" ]
+CMD [ "/etc/ent/test.sh" ]
