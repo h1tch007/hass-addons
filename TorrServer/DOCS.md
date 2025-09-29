@@ -1,3 +1,19 @@
+### Server args:
+#### Usage
+TorrServer [--port PORT] [--path PATH] [--logpath LOGPATH] [--rdb] [--httpauth] [--dontkill] [--ui]
+
+#### Options
+* --port PORT, -p PORT             web server port
+* --path PATH, -d PATH             database and settings path
+* --logpath LOGPATH, -l LOGPATH    log path
+* --rdb, -r                        start in read-only DB mode
+* --httpauth, -a                   http auth on all requests
+* --dontkill, -k                   dont kill server on signal
+* --ui, -u                         run page torrserver in browser
+* --version                        display version and exit
+
+
+#
 ### Http Api of TorrServer:
 #### GET
 
